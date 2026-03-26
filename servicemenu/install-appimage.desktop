@@ -1,0 +1,20 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-iso9660-appimage;application/vnd.appimage;application/x-executable;
+Actions=install;installrun;
+X-KDE-Submenu=Install AppImage
+X-KDE-Priority=TopLevel
+X-KDE-Submenu-Icon=run-install
+
+[Desktop Action install]
+Name=Install AppImage
+Name[en_GB]=Install
+Icon=run-install
+Exec=bash -c '~/.local/bin/install-appimage.sh %f'
+
+[Desktop Action installrun]
+Name=Install and Run AppImage
+Name[en_GB]=Install and Run
+Icon=system-run
+Exec=bash -c '~/.local/bin/install-appimage.sh --run %f'
